@@ -23,6 +23,8 @@ public class MyFarm {
         printplantnames();
         totalcarrots();
         averageNumberOfPlants();
+        everyOtherNeedsWater();
+
     }
 
     public void totalplants() {
@@ -60,12 +62,23 @@ public class MyFarm {
 
     public void averageNumberOfPlants() {
         int sumofallplants = 0;
-        for(int w=0; w< grid.length; w++){
-            for(int q = 0; q<grid[w].length; q++){
+        for (int w = 0; w < grid.length; w++) {
+            for (int q = 0; q < grid[w].length; q++) {
                 sumofallplants += grid[w][q].numberofplants;
-// divide to get average
             }
         }
-        System.out.println("the sum of all the plants is " + sumofallplants);
+        System.out.println("the average number of plants is " + sumofallplants/(grid.length*grid[0].length));
+    }
+
+    public void everyOtherNeedsWater() {
+        boolean plotwater = 0;
+        for (int y = 0; y < grid.length; y++) {
+            for (int e = 0; e < grid[y].length; e++) {
+                plotwater += grid[y][e].needswater;
+            }
+        // odd needs water
+        // change the value of needsWater to be true for every other plot
+        // print the value or needs water for all plots row by row
+
     }
 }

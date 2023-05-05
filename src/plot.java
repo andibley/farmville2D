@@ -3,8 +3,6 @@ public class plot {
    public int numberofplants;
    public boolean needswater;
 
-
-
    public plot() {
       needswater = false;
      numberofplants = (int)(Math.random() * 100) +10;
