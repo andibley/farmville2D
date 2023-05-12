@@ -1,11 +1,5 @@
 public class MyFarm {
 
-    public static void main(String[] args) {
-        MyFarm charlie = new MyFarm();
-        plot ryan = new plot();
-        ryan.printPlot();
-    }
-
     public plot[][] grid;
 
     public MyFarm() {
