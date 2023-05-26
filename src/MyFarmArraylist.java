@@ -16,9 +16,12 @@ public class MyFarmArraylist {
         addSunflower();
         addcorn();
         printPlantName();
+        printrowinfo();
         tomatolocations();
         totalcarrots();
-        averageNumberOfPlants();
+       // averageNumberOfPlants();
+        everyotherneedswater();
+        printrowinfo();
     }
 
 
@@ -27,6 +30,12 @@ public class MyFarmArraylist {
             System.out.print(k + ":" + row.get(k).plantname + "\t");
         }
         System.out.println(" ");
+    }
+
+    public void printrowinfo(){
+        for(plot a: row){
+            a.printPlot();
+        }
     }
 
     public void totalPlants() {
@@ -78,11 +87,21 @@ public class MyFarmArraylist {
     public void averageNumberOfPlants() {
 int averagenumberofplants = 0;
 for(plot d: row){
-    averagenumberofplants += d.numberofplants;
+    averagenumberofplants += d.numberofplants/;
+    }
+    }
 
+    public void everyotherneedswater(){
+for(int n = 0; n<row.size(); n++){
+    if(n%2 == 1) {
+        row.get(n).needswater = false;
+    } else {
+        row.get(n).needswater = true;
+        }
+    }
 }
     }
-    }
+
 
 
 
